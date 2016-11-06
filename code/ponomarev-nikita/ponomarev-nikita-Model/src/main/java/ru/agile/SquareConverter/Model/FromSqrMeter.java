@@ -2,23 +2,23 @@ package ru.agile.SquareConverter.Model;
 
 public class FromSqrMeter {
 
-    private final static double ToKilometerMultiplier = 0.000001;
-    private final static double ToHectareMultiplier = 0.0001;
-    private final static double ToArMultiplier = 0.01;
-    private final static double ToSqrCentimeterMultiplier = 10000;
-    private final static double ToSqrMillimeterMultiplier = 1000000;
-    private final static double ToSqrYardMultiplier = 1.196;
-    private final static double ToSqrFootMultiplier = 10.76;
-    private final static double ToSqrInchMultiplier = 1550;
-    private final static double ToSqrAcreMultiplier = 0.0002471;
-    private final static double ToSqrMileMultiplier = 0.0000003861;
+    private final static double TOKILOMETERMULTIPLIER = 0.000001;
+    private final static double TOHECTAREMULTIPLIER = 0.0001;
+    private final static double TOARMULTIPLIER = 0.01;
+    private final static double TOSQRSANTIMETERMULTIPLIER = 10000;
+    private final static double TOSQRMILLIMETERMULTIPLIER = 1000000;
+    private final static double TOSQRYARDMULTIPLIER = 1.196;
+    private final static double TOSQRFOOTMULTIPLIER = 10.76;
+    private final static double TOSQRINCHMULTIPLIER = 1550;
+    private final static double TOSQRACREMULTIPLIER = 0.0002471;
+    private final static double TOSQRMILEMULTIPLIER = 0.0000003861;
 
     public double toSqrKilometer(final double sqrMeterCount) {
         if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToKilometerMultiplier * sqrMeterCount;
+        return TOKILOMETERMULTIPLIER * sqrMeterCount;
     }
 
     public double toHectare(final double sqrMeterCount) {
@@ -26,7 +26,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToHectareMultiplier * sqrMeterCount;
+        return TOHECTAREMULTIPLIER * sqrMeterCount;
     }
 
     public double toAr(final double sqrMeterCount) {
@@ -34,7 +34,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToArMultiplier * sqrMeterCount;
+        return TOARMULTIPLIER * sqrMeterCount;
     }
 
     public double toSqrCentimeter(final double sqrMeterCount) {
@@ -42,7 +42,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToSqrCentimeterMultiplier * sqrMeterCount;
+        return TOSQRSANTIMETERMULTIPLIER * sqrMeterCount;
     }
 
     public double toSqrMillimeter(final double sqrMeterCount) {
@@ -50,7 +50,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToSqrMillimeterMultiplier * sqrMeterCount;
+        return TOSQRMILLIMETERMULTIPLIER * sqrMeterCount;
     }
 
     public double toSqrYard(final double sqrMeterCount) {
@@ -58,7 +58,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToSqrYardMultiplier * sqrMeterCount;
+        return TOSQRYARDMULTIPLIER * sqrMeterCount;
     }
 
     public double toSqrFoot(final double sqrMeterCount) {
@@ -66,7 +66,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToSqrFootMultiplier * sqrMeterCount;
+        return TOSQRFOOTMULTIPLIER * sqrMeterCount;
     }
 
     public double toSqrInch(final double sqrMeterCount) {
@@ -74,7 +74,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToSqrInchMultiplier * sqrMeterCount;
+        return TOSQRINCHMULTIPLIER * sqrMeterCount;
     }
 
     public double toSqrAcre(final double sqrMeterCount) {
@@ -82,7 +82,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToSqrAcreMultiplier * sqrMeterCount;
+        return TOSQRACREMULTIPLIER * sqrMeterCount;
     }
 
     public double toSqrMile(final double sqrMeterCount) {
@@ -90,7 +90,7 @@ public class FromSqrMeter {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
-        return ToSqrMileMultiplier * sqrMeterCount;
+        return TOSQRMILEMULTIPLIER * sqrMeterCount;
     }
 
 }
