@@ -2,16 +2,16 @@ package ru.agile.SquareConverter.Model;
 
 public class FromSqrMeter {
 
-    private final double toKilometerMultiplier = 0.000001;
-    private final double toHectareMultiplier = 0.0001;
-    private final double toArMultiplier = 0.01;
-    private final double toSqrCentimeterMultiplier = 10000;
-    private final double toSqrMillimeterMultiplier = 1000000;
-    private final double toSqrYardMultiplier = 1.196;
-    private final double toSqrFootMultiplier = 10.76;
-    private final double toSqrInchMultiplier = 1550;
-    private final double toSqrAcreMultiplier = 0.0002471;
-    private final double toSqrMileMultiplier = 0.0000003861;
+    private final static double toKilometerMultiplier = 0.000001;
+    private final static double toHectareMultiplier = 0.0001;
+    private final static double toArMultiplier = 0.01;
+    private final static double toSqrCentimeterMultiplier = 10000;
+    private final static double toSqrMillimeterMultiplier = 1000000;
+    private final static double toSqrYardMultiplier = 1.196;
+    private final static double toSqrFootMultiplier = 10.76;
+    private final static double toSqrInchMultiplier = 1550;
+    private final static double toSqrAcreMultiplier = 0.0002471;
+    private final static double toSqrMileMultiplier = 0.0000003861;
 
     public double toSqrKilometer(final double sqrMeterCount) {
         if (sqrMeterCount < 0) {

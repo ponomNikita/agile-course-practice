@@ -16,7 +16,7 @@ public class SquareConverterTest {
 
     @Test
     public void IsFromSqrMeterNotNull() {
-        FromSqrMeter result = converter.ConvertFromSqrMeter();
+        FromSqrMeter result = converter.convertFromSqrMeter();
 
         assertNotNull(result);
     }
