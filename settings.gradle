@@ -43,3 +43,6 @@ include "code/kornyakov-kirill-lab3/Infrastructure"
 project(":code/kornyakov-kirill-lab3/Infrastructure").name = "kornyakov-kirill-lab3-Infrastructure"
 
 //
+include "code:ponomarev-nikita:ponomarev-nikita-Model"
+project(":code:ponomarev-nikita:ponomarev-nikita-Model").name = "ponomarev-nikita-Model"
+
