@@ -10,7 +10,7 @@ public class SquareConverterTest {
     private ISquareConverter converter;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         converter = new SquareConverter();
     }
 
