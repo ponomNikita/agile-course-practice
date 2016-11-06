@@ -13,7 +13,9 @@ public class FromSqrMeterTest {
 
     private FromSqrMeter converter;
 
-    public FromSqrMeter getConverter() { return converter; }
+    public FromSqrMeter getConverter() {
+        return converter;
+    }
 
     @Before
     public void setUp() {
