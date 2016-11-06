@@ -3,7 +3,6 @@ package ru.unn.agile.SquareConverter.Model;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.TestCase.fail;
 import static org.hamcrest.CoreMatchers.is;
 
 import static org.junit.Assert.*;
@@ -12,220 +11,213 @@ public class FromSqrMeterTest {
 
     private final double delta = 0.0000000001;
 
-    FromSqrMeter converter;
+    private FromSqrMeter converter;
+
+    public FromSqrMeter getConverter() { return converter; }
 
     @Before
-    public void setUp(){
+    public void setUp() {
         converter = new FromSqrMeter();
     }
 
     @Test
-    public  void canConvertFromSqrMeterToSqrKilometer(){
+    public  void canConvertFromSqrMeterToSqrKilometer() {
         double sqrKilometerCount = converter.toSqrKilometer(1);
         assertEquals(0.000001, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToSqrKilometer(){
+    public void canConvertFromNegativeSqrMeterCountToSqrKilometer() {
         converter.toSqrKilometer(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrKilometer(){
-        try{
+    public void isCorrectExceptionMessageForToSqrKilometer() {
+        try {
             converter.toSqrKilometer(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToHectare(){
+    public void canConvertFromSqrMeterToHectare() {
         double sqrKilometerCount = converter.toHectare(1);
         assertEquals(0.0001, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToHectare(){
+    public void canConvertFromNegativeSqrMeterCountToHectare() {
         converter.toHectare(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrHectare(){
-        try{
+    public void isCorrectExceptionMessageForToSqrHectare() {
+        try {
             converter.toHectare(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToAr(){
+    public void canConvertFromSqrMeterToAr() {
         double sqrKilometerCount = converter.toAr(1);
         assertEquals(0.01, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToAr(){
+    public void canConvertFromNegativeSqrMeterCountToAr() {
         converter.toAr(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrAr(){
-        try{
+    public void isCorrectExceptionMessageForToSqrAr() {
+        try {
             converter.toAr(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToSqrCentimeter(){
+    public void canConvertFromSqrMeterToSqrCentimeter() {
         double sqrKilometerCount = converter.toSqrCentimeter(1);
         assertEquals(10000, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToSqrCentimeter(){
+    public void canConvertFromNegativeSqrMeterCountToSqrCentimeter() {
         converter.toSqrCentimeter(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrSqrCentimeter(){
-        try{
+    public void isCorrectExceptionMessageForToSqrSqrCentimeter(){
+        try {
             converter.toSqrCentimeter(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToSqrMillimeter(){
+    public void canConvertFromSqrMeterToSqrMillimeter() {
         double sqrKilometerCount = converter.toSqrMillimeter(1);
         assertEquals(1000000, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToSqrMillimeter(){
+    public void canConvertFromNegativeSqrMeterCountToSqrMillimeter() {
         converter.toSqrMillimeter(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrSqrMillimeter(){
-        try{
+    public void isCorrectExceptionMessageForToSqrSqrMillimeter() {
+        try {
             converter.toSqrMillimeter(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToSqrYard(){
+    public void canConvertFromSqrMeterToSqrYard() {
         double sqrKilometerCount = converter.toSqrYard(1);
         assertEquals(1.196, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToSqrYard(){
+    public void canConvertFromNegativeSqrMeterCountToSqrYard() {
         converter.toSqrYard(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrSqrYard(){
-        try{
+    public void isCorrectExceptionMessageForToSqrSqrYard() {
+        try {
             converter.toSqrYard(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToSqrFoot(){
+    public void canConvertFromSqrMeterToSqrFoot() {
         double sqrKilometerCount = converter.toSqrFoot(1);
         assertEquals(10.76, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToSqrFoot(){
+    public void canConvertFromNegativeSqrMeterCountToSqrFoot() {
         converter.toSqrFoot(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrSqrFoot(){
-        try{
+    public void isCorrectExceptionMessageForToSqrSqrFoot() {
+        try {
             converter.toSqrFoot(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToSqrInch(){
+    public void canConvertFromSqrMeterToSqrInch() {
         double sqrKilometerCount = converter.toSqrInch(1);
         assertEquals(1550, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToSqrInch(){
+    public void canConvertFromNegativeSqrMeterCountToSqrInch() {
         converter.toSqrInch(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrSqrInch(){
-        try{
+    public void isCorrectExceptionMessageForToSqrSqrInch() {
+        try {
             converter.toSqrInch(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToSqrAcre(){
+    public void canConvertFromSqrMeterToSqrAcre() {
         double sqrKilometerCount = converter.toSqrAcre(1);
         assertEquals(0.0002471, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToSqrAcre(){
+    public void canConvertFromNegativeSqrMeterCountToSqrAcre() {
         converter.toSqrAcre(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrSqrAcre(){
-        try{
+    public void isCorrectExceptionMessageForToSqrSqrAcre() {
+        try {
             converter.toSqrAcre(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
 
     @Test
-    public void canConvertFromSqrMeterToSqrMile(){
+    public void canConvertFromSqrMeterToSqrMile() {
         double sqrKilometerCount = converter.toSqrMile(1);
         assertEquals(0.0000003861, sqrKilometerCount, delta);
     }
 
     @Test(expected  = IllegalArgumentException.class)
-    public void canConvertFromNegativeSqrMeterCountToSqrMile(){
+    public void canConvertFromNegativeSqrMeterCountToSqrMile() {
         converter.toSqrMile(-1);
     }
 
     @Test
-    public void IsCorrectExceptionMessageForToSqrSqrMile(){
-        try{
+    public void isCorrectExceptionMessageForToSqrSqrMile() {
+        try {
             converter.toSqrMile(-1);
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Square must be positive number"));
         }
     }
+
 }

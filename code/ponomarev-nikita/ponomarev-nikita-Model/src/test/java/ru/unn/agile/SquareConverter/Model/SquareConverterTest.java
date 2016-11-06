@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class SquareConverterTest {
 
-    ISquareConverter converter;
+    private ISquareConverter converter;
 
     @Before
     public void setUp(){
@@ -15,7 +15,7 @@ public class SquareConverterTest {
     }
 
     @Test
-    public void IsFromSqrMeterNotNull() {
+    public void isFromSqrMeterNotNull() {
         FromSqrMeter result = converter.convertFromSqrMeter();
 
         assertNotNull(result);
