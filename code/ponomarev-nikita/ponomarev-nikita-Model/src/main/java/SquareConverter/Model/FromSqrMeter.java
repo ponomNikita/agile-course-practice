@@ -13,90 +13,80 @@ public class FromSqrMeter {
     private final double toSqrAcreMultiplier = 0.0002471;
     private final double toSqrMileMultiplier = 0.0000003861;
 
-    public double ToSqrKilometer(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toSqrKilometer(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toKilometerMultiplier * sqrMeterCount;
     }
 
-    public double ToHectare(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toHectare(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toHectareMultiplier * sqrMeterCount;
     }
 
-    public double ToAr(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toAr(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toArMultiplier * sqrMeterCount;
     }
 
-    public double ToSqrCentimeter(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toSqrCentimeter(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toSqrCentimeterMultiplier * sqrMeterCount;
     }
 
-    public double ToSqrMillimeter(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toSqrMillimeter(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toSqrMillimeterMultiplier * sqrMeterCount;
     }
 
-    public double ToSqrYard(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toSqrYard(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toSqrYardMultiplier * sqrMeterCount;
     }
 
-    public double ToSqrFoot(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toSqrFoot(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toSqrFootMultiplier * sqrMeterCount;
     }
 
-    public double ToSqrInch(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toSqrInch(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toSqrInchMultiplier * sqrMeterCount;
     }
 
-    public double ToSqrAcre(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toSqrAcre(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
         return toSqrAcreMultiplier * sqrMeterCount;
     }
 
-    public double ToSqrMile(double sqrMeterCount) {
-        if (sqrMeterCount < 0)
-        {
+    public double toSqrMile(final double sqrMeterCount) {
+        if (sqrMeterCount < 0) {
             throw new IllegalArgumentException("Square must be positive number");
         }
 
