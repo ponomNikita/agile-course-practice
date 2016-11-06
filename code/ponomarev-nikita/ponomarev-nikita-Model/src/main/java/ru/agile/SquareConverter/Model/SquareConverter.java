@@ -1,9 +1,9 @@
-package SquareConverter.Model;
+package ru.agile.SquareConverter.Model;
 
 public class SquareConverter implements ISquareConverter {
 
     @Override
-    public FromSqrMeter ConvertFromSqrMeter() {
+    public FromSqrMeter convertFromSqrMeter() {
         return new FromSqrMeter();
     }
 

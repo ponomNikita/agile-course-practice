@@ -1,4 +1,4 @@
-package SquareConverter.Model;
+package ru.agile.SquareConverter.Model;
 
 public class FromSqrMeter {
 
