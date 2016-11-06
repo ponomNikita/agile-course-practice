@@ -92,7 +92,7 @@ public class FromSqrMeterTest {
     }
 
     @Test
-    public void isCorrectExceptionMessageForToSqrSqrCentimeter(){
+    public void isCorrectExceptionMessageForToSqrSqrCentimeter() {
         try {
             converter.toSqrCentimeter(-1);
         } catch (IllegalArgumentException e) {
