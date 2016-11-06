@@ -1,4 +1,4 @@
-package ru.agile.SquareConverter.Model;
+package ru.unn.agile.SquareConverter.Model;
 
 public class SquareConverter implements ISquareConverter {
 

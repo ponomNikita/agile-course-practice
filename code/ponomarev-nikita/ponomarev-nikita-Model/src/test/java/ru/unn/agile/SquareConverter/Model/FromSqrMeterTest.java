@@ -1,4 +1,4 @@
-package ru.agile.SquareConverter.Model;
+package ru.unn.agile.SquareConverter.Model;
 
 import org.junit.Before;
 import org.junit.Test;
