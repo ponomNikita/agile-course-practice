@@ -152,8 +152,14 @@ project(":code/solovev-dmitriy").name = "solovev-dmitriy-Model"
 // Старлытов Евгений
 // Степыкин Илья
 // Тарасенко Алексей
-include "code/tarasenko-alex"
-project(":code/tarasenko-alex").name = "tarasenko-alex"
+include "code/VolumeCalculator/Model"
+project(":code/VolumeCalculator/Model").name = "VolumeCalculator-Model"
+
+include "code/VolumeCalculator/view"
+project(":code/VolumeCalculator/view").name = "VolumeCalculator-View"
+
+include "code/VolumeCalculator/ViewModel"
+project(":code/VolumeCalculator/ViewModel").name = "VolumeCalculator-ViewModel"
 // Тропичева Дарья
 include "code/Tropicheva-Darya"
 project(":code/Tropicheva-Darya").name = "Tropicheva-Darya"
