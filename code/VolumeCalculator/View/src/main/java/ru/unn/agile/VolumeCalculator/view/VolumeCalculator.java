@@ -31,6 +31,19 @@ public class VolumeCalculator {
     @FXML
     public void initialize() {
         viewModel = new VolumeCalculatorViewModel();
-        CalculateButton.setDisable(viewModel.IsCalculateButtonDisabled());
+        CalculateButton.disableProperty().bindBidirectional(viewModel.calculateDisableProperty());
+
+        Param1Label.visibleProperty().bindBidirectional(viewModel.getParam1VisibleProperty());
+        Param1TextField.visibleProperty().bindBidirectional(viewModel.getParam1VisibleProperty());
+        Param1Label.textProperty().bindBidirectional(viewModel.getParam1Name());
+
+        Param2Label.visibleProperty().bindBidirectional(viewModel.getParam2VisibleProperty());
+        Param2TextField.visibleProperty().bindBidirectional(viewModel.getParam2VisibleProperty());
+        Param2Label.textProperty().bindBidirectional(viewModel.getParam2Name());
+
+        VolumeResultTextField.textProperty().bindBidirectional(viewModel.resultVolumeProperty());
+
+        VolumeTypeListBox.setItems(viewModel.getVolumeTypeListItemsProperty().getValue());
+        VolumeTypeListBox.valueProperty().bindBidirectional(viewModel.getSelectedItemProperty());
     }
 }
