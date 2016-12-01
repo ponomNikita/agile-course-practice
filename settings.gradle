@@ -151,7 +151,7 @@ project(":code/solovev-dmitriy").name = "solovev-dmitriy-Model"
 
 // Старлытов Евгений
 // Степыкин Илья
-// Тарасенко Алексей
+// Тарасенко Алексей (лаб. №1), Пономарев Никита (лаб. №2)
 include "code/VolumeCalculator/Model"
 project(":code/VolumeCalculator/Model").name = "VolumeCalculator-Model"
 

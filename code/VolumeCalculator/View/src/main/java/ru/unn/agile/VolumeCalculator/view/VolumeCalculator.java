@@ -1,5 +1,7 @@
 package ru.unn.agile.VolumeCalculator.view;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -27,23 +29,35 @@ public class VolumeCalculator {
     public TextField VolumeResultTextField;
     @FXML
     public VolumeCalculatorViewModel viewModel;
+    @FXML
+    public Label validationMsg;
 
     @FXML
     public void initialize() {
         viewModel = new VolumeCalculatorViewModel();
-        CalculateButton.disableProperty().bindBidirectional(viewModel.calculateDisableProperty());
+        CalculateButton.disableProperty().bindBidirectional(viewModel.getCalculateDisableProperty());
 
         Param1Label.visibleProperty().bindBidirectional(viewModel.getParam1VisibleProperty());
         Param1TextField.visibleProperty().bindBidirectional(viewModel.getParam1VisibleProperty());
+        Param1TextField.textProperty().bindBidirectional(viewModel.getParam1ValueProperty());
         Param1Label.textProperty().bindBidirectional(viewModel.getParam1Name());
 
         Param2Label.visibleProperty().bindBidirectional(viewModel.getParam2VisibleProperty());
         Param2TextField.visibleProperty().bindBidirectional(viewModel.getParam2VisibleProperty());
+        Param2TextField.textProperty().bindBidirectional(viewModel.getParam2ValueProperty());
         Param2Label.textProperty().bindBidirectional(viewModel.getParam2Name());
 
-        VolumeResultTextField.textProperty().bindBidirectional(viewModel.resultVolumeProperty());
+        validationMsg.textProperty().bindBidirectional(viewModel.getValidationMsgProperty());
 
-        VolumeTypeListBox.setItems(viewModel.getVolumeTypeListItemsProperty().getValue());
+        VolumeResultTextField.textProperty().bindBidirectional(viewModel.getResultVolumeProperty());
+
         VolumeTypeListBox.valueProperty().bindBidirectional(viewModel.getSelectedItemProperty());
+
+        CalculateButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(final ActionEvent event) {
+                viewModel.calculate();
+            }
+        });
     }
 }
