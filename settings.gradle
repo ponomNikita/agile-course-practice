@@ -160,7 +160,6 @@ include "code/Fraction/ViewModel"
 project(":code/Fraction/ViewModel").name = "Fraction-ViewModel"
 include "code/Fraction/View"
 project(":code/Fraction/View").name = "Fraction-View"
-
 // Старлытов Евгений
 // Степыкин Илья
 // Тарасенко Алексей (лаб. №1), Пономарев Никита (лаб. №2)
