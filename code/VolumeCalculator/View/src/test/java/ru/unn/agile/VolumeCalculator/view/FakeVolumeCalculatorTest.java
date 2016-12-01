@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
  * Created by ponom on 01.12.2016.
  */
 public class FakeVolumeCalculatorTest {
+
     @Ignore
     @Test
     public void fakeTest() {
