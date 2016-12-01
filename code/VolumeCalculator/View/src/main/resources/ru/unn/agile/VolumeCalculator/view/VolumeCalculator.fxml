@@ -11,19 +11,19 @@
         <VolumeCalculatorViewModel fx:id="viewModel" />
     </fx:define>
     <children>
-      <Button layoutX="81.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Calculate" fx:id="CalculateButton" />
+      <Button layoutX="81.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Calculate" fx:id="calculateButton" />
       <Pane layoutX="30.0" layoutY="23.0" prefHeight="229.0" prefWidth="199.0" style="-fx-background-color: #eee; -fx-border-color: #111;">
          <children>
-            <ComboBox items="${viewModel.volumeTypeListItems}" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="167.0" promptText="Choose..." fx:id="VolumeTypeListBox"  />
-            <TextField layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="167.0" fx:id="Param1TextField"/>
-            <TextField layoutX="14.0" layoutY="149.0" prefHeight="25.0" prefWidth="167.0" fx:id="Param2TextField"/>
-            <Label layoutX="14.0" layoutY="66.0" text="Param 1" fx:id="Param1Label"/>
-            <Label layoutX="14.0" layoutY="125.0" text="Param 2" fx:id="Param2Label"/>
+            <ComboBox items="${viewModel.volumeTypeListItems}" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="167.0" promptText="Choose..." fx:id="volumeTypeListBox"  />
+            <TextField layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="167.0" fx:id="param1TextField"/>
+            <TextField layoutX="14.0" layoutY="149.0" prefHeight="25.0" prefWidth="167.0" fx:id="param2TextField"/>
+            <Label layoutX="14.0" layoutY="66.0" text="Param 1" fx:id="param1Label"/>
+            <Label layoutX="14.0" layoutY="125.0" text="Param 2" fx:id="param2Label"/>
          </children>
       </Pane>
       <Pane layoutX="268.0" layoutY="23.0" prefHeight="229.0" prefWidth="200.0" style="-fx-background-color: #eee; -fx-border-color: #111;">
          <children>
-            <TextField layoutX="26.0" layoutY="102.0" disable="true" fx:id="VolumeResultTextField"/>
+            <TextField layoutX="26.0" layoutY="102.0" disable="true" fx:id="volumeResultTextField"/>
             <Label layoutX="65.0" layoutY="64.0" prefHeight="30.0" prefWidth="70.0" text="Volume">
                <font>
                   <Font size="20.0" />

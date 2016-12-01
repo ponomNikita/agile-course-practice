@@ -2,9 +2,6 @@ package ru.unn.agile.VolumeCalculator.viewModel;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.collections.ObservableList;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -38,7 +35,8 @@ public class VolumeCalculatorViewModelTest {
     @Test
     public void isCorrectListBoxContent() {
         VolumeCalculatorViewModel viewModel = new VolumeCalculatorViewModel();
-        ObjectProperty<ObservableList<EVolumeTypes>> items =  viewModel.getVolumeTypeListItemsProperty();
+        ObjectProperty<ObservableList<EVolumeTypes>> items =
+                viewModel.getVolumeTypeListItemsProperty();
 
         assertEquals(true, items.getValue().contains(EVolumeTypes.CONE));
         assertEquals(true, items.getValue().contains(EVolumeTypes.CUBE));

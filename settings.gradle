@@ -148,7 +148,6 @@ project(":code/sovrasov-vlad").name = "sovrasov-vlad"
 // Соловьев Дмитрий
 include "code/solovev-dmitriy"
 project(":code/solovev-dmitriy").name = "solovev-dmitriy-Model"
-
 // Старлытов Евгений
 // Степыкин Илья
 // Тарасенко Алексей (лаб. №1), Пономарев Никита (лаб. №2)

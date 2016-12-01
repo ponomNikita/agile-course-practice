@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import ru.unn.agile.VolumeCalculator.viewModel.EVolumeTypes;
 import ru.unn.agile.VolumeCalculator.viewModel.VolumeCalculatorViewModel;
 
 /**
@@ -14,46 +15,47 @@ import ru.unn.agile.VolumeCalculator.viewModel.VolumeCalculatorViewModel;
  */
 public class VolumeCalculator {
     @FXML
-    public ComboBox VolumeTypeListBox;
+    private ComboBox<EVolumeTypes> volumeTypeListBox;
     @FXML
-    public Button CalculateButton;
+    private Button calculateButton;
     @FXML
-    public TextField Param1TextField;
+    private TextField param1TextField;
     @FXML
-    public TextField Param2TextField;
+    private TextField param2TextField;
     @FXML
-    public Label Param1Label;
+    private Label param1Label;
     @FXML
-    public Label Param2Label;
+    private Label param2Label;
     @FXML
-    public TextField VolumeResultTextField;
+    private TextField volumeResultTextField;
     @FXML
-    public VolumeCalculatorViewModel viewModel;
+    private VolumeCalculatorViewModel viewModel;
     @FXML
-    public Label validationMsg;
+    private Label validationMsg;
 
     @FXML
-    public void initialize() {
+    void initialize() {
         viewModel = new VolumeCalculatorViewModel();
-        CalculateButton.disableProperty().bindBidirectional(viewModel.getCalculateDisableProperty());
+        calculateButton.disableProperty()
+                .bindBidirectional(viewModel.getCalculateDisableProperty());
 
-        Param1Label.visibleProperty().bindBidirectional(viewModel.getParam1VisibleProperty());
-        Param1TextField.visibleProperty().bindBidirectional(viewModel.getParam1VisibleProperty());
-        Param1TextField.textProperty().bindBidirectional(viewModel.getParam1ValueProperty());
-        Param1Label.textProperty().bindBidirectional(viewModel.getParam1Name());
+        param1Label.visibleProperty().bindBidirectional(viewModel.getParam1VisibleProperty());
+        param1TextField.visibleProperty().bindBidirectional(viewModel.getParam1VisibleProperty());
+        param1TextField.textProperty().bindBidirectional(viewModel.getParam1ValueProperty());
+        param1Label.textProperty().bindBidirectional(viewModel.getParam1Name());
 
-        Param2Label.visibleProperty().bindBidirectional(viewModel.getParam2VisibleProperty());
-        Param2TextField.visibleProperty().bindBidirectional(viewModel.getParam2VisibleProperty());
-        Param2TextField.textProperty().bindBidirectional(viewModel.getParam2ValueProperty());
-        Param2Label.textProperty().bindBidirectional(viewModel.getParam2Name());
+        param2Label.visibleProperty().bindBidirectional(viewModel.getParam2VisibleProperty());
+        param2TextField.visibleProperty().bindBidirectional(viewModel.getParam2VisibleProperty());
+        param2TextField.textProperty().bindBidirectional(viewModel.getParam2ValueProperty());
+        param2Label.textProperty().bindBidirectional(viewModel.getParam2Name());
 
         validationMsg.textProperty().bindBidirectional(viewModel.getValidationMsgProperty());
 
-        VolumeResultTextField.textProperty().bindBidirectional(viewModel.getResultVolumeProperty());
+        volumeResultTextField.textProperty().bindBidirectional(viewModel.getResultVolumeProperty());
 
-        VolumeTypeListBox.valueProperty().bindBidirectional(viewModel.getSelectedItemProperty());
+        volumeTypeListBox.valueProperty().bindBidirectional(viewModel.getSelectedItemProperty());
 
-        CalculateButton.setOnAction(new EventHandler<ActionEvent>() {
+        calculateButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(final ActionEvent event) {
                 viewModel.calculate();
